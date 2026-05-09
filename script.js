@@ -3,9 +3,9 @@ const appreciationMessages = [
     "Thank you for all the sacrifices you've made for me.",
     "Your love and support mean everything to me.",
     "You're the strongest person I know, Mom.",
-    "I admire your kindness and compassion.",
+    "You never questioned my goals and were always supportive.",
     "Thank you for believing in me when I doubted myself.",
-    "Your hugs are the best medicine.",
+    "I never had to explain why something mattered to me. You just showed up because it mattered to me.",
     "You've always been there when I needed you most.",
     "I'm grateful for the lessons you've taught me.",
     "Your smile brightens my darkest days.",
@@ -13,7 +13,7 @@ const appreciationMessages = [
     "Thank you for your endless patience and understanding.",
     "You make the world a better place just by being in it.",
     "I love you more than words can express.",
-    "Your cooking and care have always made home feel warm.",
+    "You never made me feel judged. You just made me feel loved.",
     "Thank you for encouraging me to chase my dreams.",
     "You're the most beautiful person inside and out.",
     "I'm so proud to be your child.",
@@ -28,8 +28,8 @@ const appreciationMessages = [
     "You're my hero, Mom.",
     "I appreciate you more than you'll ever know.",
     "Thank you for all the little things you do.",
-    "Your wisdom has guided me through life.",
-    "I love you to the moon and back!",
+    "You always had an answer whenever I came to you with a question.",
+    "Happy Mother's Day, Mom. You showed up in every way that counted!",
 ];
 
 // Game state
