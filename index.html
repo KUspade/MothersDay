@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mom Appreciation Clicker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💝 Happy Mother's Day, Mom! 💝</h1>
+            <p class="subtitle">Click the button to reveal how much you mean to me</p>
+        </header>
+
+        <main>
+            <div class="game-area">
+                <button class="click-button" id="clickButton">
+                    <span class="heart">❤️</span>
+                    <span class="text">Click Me!</span>
+                </button>
+            </div>
+
+            <div class="stats">
+                <div class="stat">
+                    <span class="label">Clicks:</span>
+                    <span class="value" id="clickCount">0</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Messages Unlocked:</span>
+                    <span class="value" id="messageCount">0</span>
+                </div>
+            </div>
+
+            <div class="message-display" id="messageDisplay">
+                <p id="currentMessage">Click the button to see a special message!</p>
+            </div>
+
+            <div class="messages-log">
+                <h2>Your Messages:</h2>
+                <div class="message-list" id="messageList"></div>
+            </div>
+
+            <button class="reset-button" id="resetButton">Start Over</button>
+        </main>
+
+        <footer>
+            <p>Made with 💕 for the best mom ever</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
