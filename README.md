@@ -5,7 +5,7 @@ A heartfelt interactive gift for Mom! This is a special clicker game that reveal
 ## Features
 
 ✨ **Interactive Clicker Game** - Click the button to reveal appreciation messages  
-❤️ **30 Unique Messages** - Each message expresses your love and gratitude  
+❤️ **40 Unique Messages** - Each message expresses your love and gratitude  
 🎨 **Beautiful Design** - Gradient backgrounds, smooth animations, and floating hearts  
 📊 **Message Tracker** - Keep track of how many clicks and messages you've unlocked  
 📜 **Message Log** - View all your messages in one place  
