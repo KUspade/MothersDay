@@ -37,14 +37,6 @@ let clickCount = 0;
 let messageCount = 0;
 let usedMessages = new Set();
 
-// DOM Elements
-const clickButton = document.getElementById('clickButton');
-const resetButton = document.getElementById('resetButton');
-const clickCountDisplay = document.getElementById('clickCount');
-const messageCountDisplay = document.getElementById('messageCount');
-const currentMessageDisplay = document.getElementById('currentMessage');
-const messageList = document.getElementById('messageList');
-
 // Get a random message that hasn't been used yet
 function getRandomMessage() {
     let availableIndices = appreciationMessages
@@ -91,54 +83,68 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Handle click button
-clickButton.addEventListener('click', function() {
-    clickCount++;
-    messageCount++;
+// Wait for DOM to be ready
+document.addEventListener('DOMContentLoaded', function() {
+    // DOM Elements
+    const clickButton = document.getElementById('clickButton');
+    const resetButton = document.getElementById('resetButton');
+    const clickCountDisplay = document.getElementById('clickCount');
+    const messageCountDisplay = document.getElementById('messageCount');
+    const currentMessageDisplay = document.getElementById('currentMessage');
+    const messageList = document.getElementById('messageList');
 
-    // Get and display new message
-    const newMessage = getRandomMessage();
-    currentMessageDisplay.textContent = newMessage;
-
-    // Update counters
-    clickCountDisplay.textContent = clickCount;
-    messageCountDisplay.textContent = messageCount;
-
-    // Add message to the log
-    const messageItem = document.createElement('div');
-    messageItem.className = 'message-item';
-    messageItem.innerHTML = `
-        <span class="message-item-number">Message #${messageCount}</span>
-        <p class="message-item-text">${newMessage}</p>
-    `;
-    messageList.insertBefore(messageItem, messageList.firstChild);
-
-    // Create floating hearts
-    for (let i = 0; i < 3; i++) {
-        setTimeout(() => createFloatingHeart(), i * 100);
+    // Make sure elements exist
+    if (!clickButton || !resetButton) {
+        console.error('Button elements not found');
+        return;
     }
 
-    // Add animation to button
-    clickButton.style.animation = 'none';
-    setTimeout(() => {
-        clickButton.style.animation = '';
-    }, 10);
-});
+    // Handle click button
+    clickButton.addEventListener('click', function() {
+        clickCount++;
+        messageCount++;
 
-// Handle reset button
-resetButton.addEventListener('click', function() {
-    if (confirm('Are you sure you want to start over? This will reset all your clicks and messages.')) {
-        clickCount = 0;
-        messageCount = 0;
-        usedMessages.clear();
-        clickCountDisplay.textContent = '0';
-        messageCountDisplay.textContent = '0';
-        currentMessageDisplay.textContent = 'Click the button to see a special message!';
-        messageList.innerHTML = '';
-    }
-});
+        // Get and display new message
+        const newMessage = getRandomMessage();
+        currentMessageDisplay.textContent = newMessage;
 
-// Add some initial flair
-window.addEventListener('load', function() {
+        // Update counters
+        clickCountDisplay.textContent = clickCount;
+        messageCountDisplay.textContent = messageCount;
+
+        // Add message to the log
+        const messageItem = document.createElement('div');
+        messageItem.className = 'message-item';
+        messageItem.innerHTML = `
+            <span class="message-item-number">Message #${messageCount}</span>
+            <p class="message-item-text">${newMessage}</p>
+        `;
+        messageList.insertBefore(messageItem, messageList.firstChild);
+
+        // Create floating hearts
+        for (let i = 0; i < 3; i++) {
+            setTimeout(() => createFloatingHeart(), i * 100);
+        }
+
+        // Add animation to button
+        clickButton.style.animation = 'none';
+        setTimeout(() => {
+            clickButton.style.animation = '';
+        }, 10);
+    });
+
+    // Handle reset button
+    resetButton.addEventListener('click', function() {
+        if (confirm('Are you sure you want to start over? This will reset all your clicks and messages.')) {
+            clickCount = 0;
+            messageCount = 0;
+            usedMessages.clear();
+            clickCountDisplay.textContent = '0';
+            messageCountDisplay.textContent = '0';
+            currentMessageDisplay.textContent = 'Click the button to see a special message!';
+            messageList.innerHTML = '';
+        }
+    });
+
     console.log('%cHappy Mother\'s Day! 💝', 'font-size: 20px; color: #764ba2; font-weight: bold;');
 });
