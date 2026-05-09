@@ -35,7 +35,7 @@ const appreciationMessages = [
     "You helped me when I was at my weakest even if you were not at your best",
     "You always took care of me when I was sick",
     "You always made sure we had a clean and safe house to grow up in",
-    "You deserve more than I could ever give you"
+    "You deserve more than I could ever give you",
     "I never know what to get you, so I thought I would make something with the skills you allowed me to achieve",
     "You never backed down from any challenge involving us",
     "You were there for all my successes and failures, no matter the outcome you would be supportive",
