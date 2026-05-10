@@ -47,6 +47,7 @@ const appreciationMessages = [
 let clickCount = 0;
 let messageCount = 0;
 let usedMessages = new Set();
+let allMessagesRevealed = false;
 
 // Get a random message that hasn't been used yet
 function getRandomMessage() {
@@ -54,8 +55,9 @@ function getRandomMessage() {
         .map((_, index) => index)
         .filter(index => !usedMessages.has(index));
 
-    // If all messages have been used, reset and start over
+    // If all messages have been used, stop incrementing messageCount
     if (availableIndices.length === 0) {
+        allMessagesRevealed = true;
         usedMessages.clear();
         availableIndices = appreciationMessages.map((_, index) => index);
     }
@@ -113,7 +115,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Handle click button
     clickButton.addEventListener('click', function() {
         clickCount++;
-        messageCount++;
+
+        // Only increment messageCount if not all messages have been revealed
+        if (!allMessagesRevealed) {
+            messageCount++;
+        }
 
         // Get and display new message
         const newMessage = getRandomMessage();
@@ -150,6 +156,7 @@ document.addEventListener('DOMContentLoaded', function() {
             clickCount = 0;
             messageCount = 0;
             usedMessages.clear();
+            allMessagesRevealed = false;
             clickCountDisplay.textContent = '0';
             messageCountDisplay.textContent = '0';
             currentMessageDisplay.textContent = 'Click the button to see a special message!';
