@@ -134,7 +134,7 @@ main {
 
 .messages-log {
     text-align: left;
-    max-height: 200px;
+    max-height: 300px;
     overflow-y: auto;
     background: #f8f9fa;
     padding: 20px;
@@ -298,7 +298,7 @@ footer {
     }
 
     .messages-log {
-        max-height: 150px;
+        max-height: 300px;
         padding: 15px;
     }
 
