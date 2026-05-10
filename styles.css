@@ -134,7 +134,7 @@ main {
 
 .messages-log {
     text-align: left;
-    max-height: 300px;
+    max-height: 200px;
     overflow-y: auto;
     background: #f8f9fa;
     padding: 20px;
@@ -250,4 +250,81 @@ footer {
 
 .messages-log::-webkit-scrollbar-thumb:hover {
     background: #764ba2;
+}
+
+/* Mobile responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .subtitle {
+        font-size: 1em;
+    }
+
+    main {
+        gap: 20px;
+    }
+
+    .game-area {
+        padding: 20px;
+    }
+
+    .click-button {
+        width: 120px;
+        height: 120px;
+        font-size: 1em;
+    }
+
+    .click-button .heart {
+        font-size: 2em;
+    }
+
+    .stat .value {
+        font-size: 1.5em;
+    }
+
+    .message-display {
+        padding: 20px;
+        min-height: 80px;
+    }
+
+    #currentMessage {
+        font-size: 1.1em;
+    }
+
+    .messages-log {
+        max-height: 150px;
+        padding: 15px;
+    }
+
+    .messages-log h2 {
+        font-size: 1em;
+        margin-bottom: 10px;
+    }
+
+    .message-item {
+        padding: 12px;
+    }
+
+    .message-item-number {
+        font-size: 0.85em;
+    }
+
+    .message-item-text {
+        font-size: 0.95em;
+    }
+
+    .reset-button {
+        padding: 10px 20px;
+        font-size: 0.95em;
+    }
+
+    footer {
+        font-size: 0.85em;
+    }
 }
